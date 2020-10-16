@@ -1,0 +1,86 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+.container{
+   
+    border:solid red 5px;
+}
+.navbar , .mob-navbar{
+    background-color: gray;
+}
+.navbar > a{
+    padding:0px 40px;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 30px;
+    color:white;
+    float:left;
+}
+.navbar > a:hover{
+    background-color: olive;
+}
+.navbar > ul{
+    list-style:none;
+    float:right;
+  
+}
+
+.mob-navbar > ul{
+    list-style:none;
+}
+.navbar > ul > li{
+    display:inline-block;
+    padding:10px 25px;
+  
+}
+.navbar > ul:last-child{
+    padding-right: 100px;
+}
+.navbar > ul > li > a , .mob-navbar > ul > li >a{
+    text-decoration: none;
+    color: wheat;
+    font-size: 30px;
+    
+}
+.mob-navbar > ul > li {
+    padding:0px 20px;
+}
+.navbar > ul >:hover , 
+.mob-navbar > ul >li:hover{
+    background-color: black  ;
+}
+.navbar::after{
+    content:" ";
+    display:block;
+    clear:both;
+    *zoom:1;
+}
+.btn , .mob-navbar{
+    display:none;
+}
+@media screen and (max-width:700px){
+.btn , .mob-navbar{
+    display:block;
+}
+.navbar > ul{
+    display:none;
+}
+.btn > .fa-times{
+    display:none;
+}
+
+.fa-bars , .fa-times{
+    position: absolute;
+    top:20px;
+    right:20px;
+    font-size: 30px;
+}
+.fa-bars{
+    z-index:1;
+    }
+.fa-times{
+    z-index:2;
+}
+}
